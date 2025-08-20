@@ -1,0 +1,13 @@
+<%= render "shared/navbar" %>
+<div class="container mt-5">
+    <h1>Restaurants</h1>
+
+    <% @restaurants.each do |resto| %>
+        <div class="card mb-3" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title"><%= resto.name %></h5>
+                <%= link_to "View details", restaurant_path(resto), class: "btn btn-primary" %>
+            </div>
+        </div>
+    <% end %>
+</div>

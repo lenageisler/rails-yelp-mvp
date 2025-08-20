@@ -1,0 +1,9 @@
+<%= render "shared/navbar" %>
+
+<div  class="container mt-5">
+    <%= simple_form_for [@restaurant, @review] do |f| %>
+        <%= f.input :rating, collection: [0, 1, 2, 3, 4, 5], promt: "Choose rating" %>
+        <%= f.input :content %>
+        <%= f.button :submit %>    
+    <% end %>
+</div>
